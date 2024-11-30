@@ -33,7 +33,7 @@ def migracao_clientes():
     df_modelo_clientes['PIS PASEP'] = df_clientes_migracao['pis']
     df_modelo_clientes['NOME DA MÃE'] = df_clientes_migracao['nome_mae']
     df_modelo_clientes['ANOTAÇÕES GERAIS'] = df_clientes_migracao['email2']
-    print(df_modelo_clientes)
+    # print(df_modelo_clientes)
 
     return df_clientes_migracao, df_modelo_clientes
 
