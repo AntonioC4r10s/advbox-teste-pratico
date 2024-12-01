@@ -7,7 +7,8 @@ def migracao_clientes():
     o segundo contem os dados dos clientes em um modelo pré-estruturado conforme
     o modelo de migração.'''
 
-    df_clientes_migracao = pd.read_csv('data/backup/v_clientes_CodEmpresa_92577.csv', encoding='mac_roman', delimiter=';')
+    df_clientes_migracao = pd.read_csv('data/backup/v_clientes_CodEmpresa_92577.csv', encoding='mac_roman', delimiter=';', 
+                                       dtype={'numero_processo': str})
 
     # colunas_clientes_migracao = ['razao_social', 'cnpj', 'cpf', 'rg', 
     #                             'nacionalidade', 'nascimento', 'estado_civil',
@@ -33,7 +34,20 @@ def migracao_clientes():
     df_modelo_clientes['PIS PASEP'] = df_clientes_migracao['pis']
     df_modelo_clientes['NOME DA MÃE'] = df_clientes_migracao['nome_mae']
     df_modelo_clientes['ANOTAÇÕES GERAIS'] = df_clientes_migracao['email2']
-    # print(df_modelo_clientes)
-
+    
     return df_clientes_migracao, df_modelo_clientes
 
+def migracao_processos_1():
+    df_processos_migracao = pd.read_csv('data/backup/v_processos_CodEmpresa_92577.csv', encoding='mac_roman', delimiter=';')
+    df_modelo_processo = pd.read_excel('data/PROCESSOS.xlsx')
+    df_grupo_processo = pd.read_csv('data/backup/v_grupo_processo_CodEmpresa_92577.csv', encoding='mac_roman', delimiter=';')
+    df_comarca = pd.read_csv('data/backup/v_comarca_CodEmpresa_92577.csv', encoding='mac_roman', delimiter=';')
+    return df_modelo_processo, df_processos_migracao, df_grupo_processo, df_comarca
+
+def migracao_processos_2():
+    df_grupo_processo = pd.read_csv('data/backup/v_grupo_processo_CodEmpresa_92577.csv', encoding='mac_roman', delimiter=';')
+    df_fase_processo = pd.read_csv('data/backup/v_fase_CodEmpresa_92577.csv', encoding='mac_roman', delimiter=';')
+    # print(df_grupo_processo)
+    return df_fase_processo, df_grupo_processo
+
+# migracao_processos_2()
