@@ -34,7 +34,7 @@
 ## Como Usar o Projeto
 
 1. **Preparação**:
-   - Certifique-se de ter o Python 3.x instalado em sua máquina.
+   - Certifique-se de ter o Python 3.9+ instalado em sua máquina.
    - Instale as dependências necessárias usando `pip install -r requirements.txt` (crie um `requirements.txt` com as bibliotecas usadas, como `streamlit`, `pandas`, etc.).
 
 2. **Executando a Interface**:
