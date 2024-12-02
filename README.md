@@ -9,7 +9,8 @@
 - **Função**: Imagem em formato GIF que mostra uma demonstração da interface do usuário do aplicativo, permitindo que os usuários visualizem como a interface funciona.
 
 ![Interface do Projeto](img/interface.gif)
-
+![Planilha Clientes](img/img_clientes.png)
+![Planilha Processos](img/img_processos.png)
 ### `app.py`
 - **Função**: Arquivo principal para executar a interface do projeto usando Streamlit. Ele permite a interação com o usuário para gerar os arquivos de migração de dados (CLIENTES.xlsx e PROCESSOS.xlsx).
 
